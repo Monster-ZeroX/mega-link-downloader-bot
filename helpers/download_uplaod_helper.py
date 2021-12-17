@@ -51,7 +51,7 @@ async def send_splitted_file(bot, update, tg_send_type, thumb_image_path, splite
             (duration / 2)
         )
     start_time = time.time()
-    if tg_send_type == "vid":
+    if tg_send_type == "doc":
         await update.reply_chat_action("upload_video")
         megavid = await bot.send_video(
             chat_id=update.chat.id,
@@ -120,7 +120,7 @@ async def send_file(bot, update, tg_send_type, thumb_image_path, download_direct
             (duration / 2)
         )
     start_time = time.time()
-    if tg_send_type == "vid":
+    if tg_send_type == "doc":
         await update.reply_chat_action("upload_video")
         megavid = await bot.send_video(
             chat_id=update.chat.id,
